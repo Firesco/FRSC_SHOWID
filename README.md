@@ -1,4 +1,4 @@
-# Show-ID
+# FRSC_SHOWID 
 
 **Yetkili özel show id**
 
