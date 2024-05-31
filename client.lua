@@ -127,7 +127,7 @@ function GetNeareastPlayers()
         if IsEntityVisible(ped) then
             for x, identifier in pairs(onlinePlayers) do 
                 if x == tostring(playerServerId) then
-                    table.insert(players_clean, {Text = '~g~Discord : ~w~~b~'..identifier:upper()..'', playerId = '~g~Oyuncu ID : ~w~'..playerServerId..'', coords = GetEntityCoords(ped)})
+                    table.insert(players_clean, {Text = '~g~'..Config.Type:upper()..' ID : ~w~~b~'..identifier:upper()..'', playerId = '~g~Oyuncu ID : ~w~'..playerServerId..'', coords = GetEntityCoords(ped)})
                 end
             end
         end

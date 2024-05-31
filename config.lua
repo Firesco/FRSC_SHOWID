@@ -4,8 +4,9 @@ Config = {}
 Config.TextFont = 8
 Config.TextScale = 0.9
 Config.Marker = true -- Marker On(true)/Off(false)
-Config.MarkerColor = {0, 255, 0} -- r,g,b
-Config.MarkerType = 2 -- https://docs.fivem.net/docs/game-references/markers/ 
+Config.MarkerColor = {252, 3, 3} -- r,g,b
+Config.MarkerType = 2 -- https://docs.fivem.net/docs/game-references/markers/
+Config.Type = "steam" -- ID Türü belirleme, "steam,discord,license,ip"
 
 -- Genel Ayarlar
 Config.AdminsOnly = false -- Admin özel Önce README okuyun !
