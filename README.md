@@ -2,6 +2,9 @@
 
 # FRSC_SHOWID 
 
+İndirip kullanmadan önce **LICENSE-TR** adlı dosyayı okuyunuz.Haklarınız indirildikten sonra kabül edilmiş sayılır.
+
+
 Marker sistemli ShowID scriptidir.
 Marker **config.lua** üzerinden kapatıp açılabilir. Rengi ve type ayarlanabilir.
 
