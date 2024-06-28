@@ -2,7 +2,7 @@
 
 # FRSC_SHOWID 
 
-İndirip kullanmadan önce **LICENSE-TR** adlı dosyayı okuyunuz.Haklarınız [YAZILIM] indirildikten sonra kabül edilmiş sayılır.
+İndirip kullanmadan önce **LICENSE** adlı dosyayı okuyunuz.Haklarınız [YAZILIM] indirildikten sonra kabul edilmiş sayılır.
 
 
 Marker sistemli ShowID scriptidir.
