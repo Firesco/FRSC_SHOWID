@@ -72,14 +72,14 @@ AddEventHandler('frsc-showid:client:add-id', function(identifier, playerSource)
     end
 end)
 
-RegisterNetEvent('frsc-showid:client:add-id2')
-AddEventHandler('frsc-showid:client:add-id2', function(identifier2, playerSource2)
-    if playerSource2 then
-        onlinePlayerss[playerSource2] = identifier2
-    else
-        onlinePlayerss = identifier2
-    end
-end)
+-- RegisterNetEvent('frsc-showid:client:add-id2')
+-- AddEventHandler('frsc-showid:client:add-id2', function(identifier2, playerSource2)
+--     if playerSource2 then
+--         onlinePlayerss[playerSource2] = identifier2
+--     else
+--         onlinePlayerss = identifier2
+--     end
+-- end)
 
 RegisterCommand(Config.CommandName, function()
     if forceDraw then
@@ -125,9 +125,21 @@ function GetNeareastPlayers()
         local ped = GetPlayerPed(player)
         local ping = playerPing
         if IsEntityVisible(ped) then
+            local getstringstext = nil
+            if Config.Type == "discord" then
+                getstringstext = Config.Strings.discordtext
+            elseif Config.Type == "steam" then
+                getstringstext = Config.Strings.steamtext
+            elseif Config.Type == "ip" then
+                getstringstext = Config.Strings.iptext
+            elseif Config.Type == "license" then
+                getstringstext = Config.Strings.licensetext
+            else
+                getstringstext = Config.Strings.unknowntext
+            end
             for x, identifier in pairs(onlinePlayers) do 
                 if x == tostring(playerServerId) then
-                    table.insert(players_clean, {Text = '~g~'..Config.Type:upper()..' ID : ~w~~b~'..identifier:upper()..'', playerId = '~g~Oyuncu ID : ~w~'..playerServerId..'', coords = GetEntityCoords(ped)})
+                    table.insert(players_clean, {Text = '~g~'..getstringstext:upper()..' : ~w~~b~'..identifier:upper()..'', playerId = '~g~'..Config.Strings.playertext..' : ~w~'..playerServerId..'', coords = GetEntityCoords(ped)})
                 end
             end
         end
