@@ -72,14 +72,14 @@ AddEventHandler('frsc-showid:client:add-id', function(identifier, playerSource)
     end
 end)
 
--- RegisterNetEvent('frsc-showid:client:add-id2')
--- AddEventHandler('frsc-showid:client:add-id2', function(identifier2, playerSource2)
---     if playerSource2 then
---         onlinePlayerss[playerSource2] = identifier2
---     else
---         onlinePlayerss = identifier2
---     end
--- end)
+RegisterNetEvent('frsc-showid:client:add-id2')
+AddEventHandler('frsc-showid:client:add-id2', function(identifier2, playerSource2)
+    if playerSource2 then
+        onlinePlayerss[playerSource2] = identifier2
+    else
+        onlinePlayerss = identifier2
+    end
+end)
 
 RegisterCommand(Config.CommandName, function()
     if forceDraw then
